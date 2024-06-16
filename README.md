@@ -1,4 +1,5 @@
- ### NudeNet FastAPI helps you censor your images and detect NSFW images.
+## NudeNet FastAPI 
+Helps you censor your images and detect NSFW images.
 
 ## Features
 1. Detect gender and any body part. e.g. *female face, belly, feet*
