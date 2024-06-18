@@ -1,6 +1,8 @@
 import io
 from typing import List
 
+import uvicorn
+
 from fastapi import FastAPI, UploadFile
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import Response as fastapi_response
@@ -126,3 +128,6 @@ async def is_nsfw(image: UploadFile,
     image_pil: Image.Image = Image.open(io.BytesIO(image_content))
     
     return helper.is_NSFW(image_pil, nsfw_criteria, detection_threshold)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8000)
